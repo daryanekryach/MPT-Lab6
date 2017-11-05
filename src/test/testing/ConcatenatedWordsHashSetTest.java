@@ -12,7 +12,7 @@ public class ConcatenatedWordsHashSetTest {
     @Before
     public void init() throws Exception {
         concatenationHashSet = new ConcatenatedWordsWithHashSet();
-        concatenationHashSet.readFileToHashSet("D:\\DARYA\\GitHub\\MPT-Lab6\\test.txt");
+        concatenationHashSet.readFileToHashSet("test.txt");
         concatenationHashSet.findConcatenatedWords();
     }
 
@@ -28,8 +28,8 @@ public class ConcatenatedWordsHashSetTest {
         assertNull(concatenationHashSet.concatenatedWords);
     }
 
-    @Test
-    public void checkForConcatenationHashSetTest() {
-
-    }
+//    @Test
+//    public void checkForConcatenationHashSetTest() {
+//
+//    }
 }

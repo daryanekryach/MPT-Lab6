@@ -13,7 +13,7 @@ public class Main {
         System.out.println("FINDING CONCATENATED WORDS WITH TRIE IMPLEMENTATION\n");
 
         ConcatenatedWordsWithTrie concatenationTrie = new ConcatenatedWordsWithTrie();
-        concatenationTrie.readFileToTrie("D:\\DARYA\\GitHub\\MPT-Lab6\\words.txt");
+        concatenationTrie.readFileToTrie("words.txt");
         Metrics.start();
         concatenationTrie.findConcatenatedWords();
         Metrics.stop();
@@ -26,7 +26,7 @@ public class Main {
         System.out.println("\nFINDING CONCATENATED WORDS WITH HASHSET IMPLEMENTATION\n");
 
         ConcatenatedWordsWithHashSet concatenationHashSet = new ConcatenatedWordsWithHashSet();
-        concatenationHashSet.readFileToHashSet("D:\\DARYA\\GitHub\\MPT-Lab6\\words.txt");
+        concatenationHashSet.readFileToHashSet("words.txt");
         Metrics.start();
         concatenationHashSet.findConcatenatedWords();
         Metrics.stop();

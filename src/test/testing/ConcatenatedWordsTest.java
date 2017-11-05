@@ -14,7 +14,7 @@ public class ConcatenatedWordsTest {
     @Before
     public void init() throws Exception {
         concatenationTrie = new ConcatenatedWordsWithTrie();
-        concatenationTrie.readFileToTrie("D:\\DARYA\\GitHub\\MPT-Lab6\\test.txt");
+        concatenationTrie.readFileToTrie("test.txt");
         concatenationTrie.findConcatenatedWords();
     }
 
@@ -30,10 +30,10 @@ public class ConcatenatedWordsTest {
         assertNull(concatenationTrie.concatenatedWords);
     }
 
-    @Test
-    public void checkForConcatenationTrieTest() {
-
-    }
+//    @Test
+//    public void checkForConcatenationTrieTest() {
+//
+//    }
 
     @Test
     public void getFirstLongestConcatenatedWordTest() {
