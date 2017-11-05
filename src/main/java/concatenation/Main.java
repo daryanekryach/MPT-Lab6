@@ -5,11 +5,11 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        TrieImplementation();
-        HashSetImplementation();
+        trieImplementation();
+        hashSetImplementation();
     }
 
-    private static void TrieImplementation() throws IOException {
+    private static void trieImplementation() throws IOException {
         System.out.println("FINDING CONCATENATED WORDS WITH TRIE IMPLEMENTATION\n");
 
         ConcatenatedWordsWithTrie concatenationTrie = new ConcatenatedWordsWithTrie();
@@ -22,7 +22,7 @@ public class Main {
         concatenationTrie.free();
     }
 
-    private static void HashSetImplementation() throws IOException {
+    private static void hashSetImplementation() throws IOException {
         System.out.println("\nFINDING CONCATENATED WORDS WITH HASHSET IMPLEMENTATION\n");
 
         ConcatenatedWordsWithHashSet concatenationHashSet = new ConcatenatedWordsWithHashSet();

@@ -44,7 +44,7 @@ public class Trie {
                 return null;
         }
 
-        if (node == root)
+        if (node.equals(root))
             return null;
 
         return node;
