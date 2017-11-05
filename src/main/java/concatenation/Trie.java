@@ -3,11 +3,11 @@ package concatenation;
 public class Trie {
     private TrieNode root;
 
-    Trie() {
+    public Trie() {
         root = new TrieNode();
     }
 
-     void insert(String word) {
+    public void insert(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
@@ -22,7 +22,7 @@ public class Trie {
         node.isEnd = true;
     }
 
-     boolean isPresentInTrie(String word) {
+    public boolean isPresentInTrie(String word) {
         TrieNode node = searchNode(word);
         if (node == null) {
             return false;
@@ -33,7 +33,7 @@ public class Trie {
         return false;
     }
 
-     private TrieNode searchNode(String word) {
+    private TrieNode searchNode(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);

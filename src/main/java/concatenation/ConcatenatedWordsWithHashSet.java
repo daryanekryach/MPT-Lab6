@@ -5,23 +5,23 @@ import java.nio.file.*;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class ConcatenatedWordsWithHashSet extends ConcatenatedWords{
+public class ConcatenatedWordsWithHashSet extends ConcatenatedWords {
     private HashSet<String> allWords;
 
-    ConcatenatedWordsWithHashSet(){
+    public ConcatenatedWordsWithHashSet() {
         allWords = new HashSet<>();
     }
 
-    void free(){
-        allWords =null;
+    public void free() {
+        allWords = null;
         concatenatedWords = null;
     }
 
-    void readFileToHashSet(String path) throws IOException {
+    public void readFileToHashSet(String path) throws IOException {
         try (Stream<String> stream = Files.lines(Paths.get(path))) {
             stream.forEach(word -> allWords.add(word));
         } catch (Exception e) {
-            System.out.println("Problem occurred while reading your file : " +e);
+            System.out.println("Problem occurred while reading your file : " + e);
         }
     }
 
@@ -42,7 +42,7 @@ public class ConcatenatedWordsWithHashSet extends ConcatenatedWords{
         }
     }
 
-    void findConcatenatedWords() {
+    public void findConcatenatedWords() {
         for (String word : allWords) {
             currentWord = word;
             checkForConcatenation(word);

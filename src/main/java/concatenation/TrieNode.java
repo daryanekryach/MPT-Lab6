@@ -1,10 +1,10 @@
 package concatenation;
 
 public class TrieNode {
-    TrieNode[] letters;
-    boolean isEnd;
+    public TrieNode[] letters;
+    public boolean isEnd;
 
-    TrieNode() {
+    public TrieNode() {
         this.letters = new TrieNode[26];
     }
 }

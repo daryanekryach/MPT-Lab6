@@ -2,23 +2,23 @@ package concatenation;
 
 import java.util.ArrayList;
 
-class ConcatenatedWords {
-     ArrayList<String> concatenatedWords;
-     String currentWord;
+public class ConcatenatedWords {
+    public ArrayList<String> concatenatedWords;
+    public String currentWord;
 
-    ConcatenatedWords(){
+    public ConcatenatedWords() {
         concatenatedWords = new ArrayList<>();
     }
 
-    String getFirstLongestConcatenatedWord() {
+    public String getFirstLongestConcatenatedWord() {
         return concatenatedWords.get(0);
     }
 
-    String getSecondLongestConcatenatedWord() {
+    public String getSecondLongestConcatenatedWord() {
         return concatenatedWords.get(1);
     }
 
-    int getNumberOfConcatenatedWords() {
+    public int getNumberOfConcatenatedWords() {
         return concatenatedWords.size();
     }
 }

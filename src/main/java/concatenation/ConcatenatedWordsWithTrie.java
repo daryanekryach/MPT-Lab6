@@ -1,26 +1,25 @@
 package concatenation;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.nio.file.*;
+import java.util.*;
 import java.util.stream.Stream;
 
-class ConcatenatedWordsWithTrie extends ConcatenatedWords{
+public class ConcatenatedWordsWithTrie extends ConcatenatedWords {
     private Trie trie;
     private ArrayList<String> allWords;
 
-    ConcatenatedWordsWithTrie() {
+    public ConcatenatedWordsWithTrie() {
         trie = new Trie();
         allWords = new ArrayList<>();
     }
 
-    void  free(){
+    public void free() {
         trie = null;
         concatenatedWords = null;
         allWords = null;
     }
+
     private void checkForConcatenation(String word) {
         String prefix;
         String suffix;
@@ -38,7 +37,7 @@ class ConcatenatedWordsWithTrie extends ConcatenatedWords{
         }
     }
 
-    void findConcatenatedWords() {
+    public void findConcatenatedWords() {
         for (String word : allWords) {
             currentWord = word;
             checkForConcatenation(word);
@@ -46,14 +45,14 @@ class ConcatenatedWordsWithTrie extends ConcatenatedWords{
         concatenatedWords.sort(Comparator.comparing(String::length).reversed());
     }
 
-    void readFileToTrie(String path) throws IOException {
+    public void readFileToTrie(String path) throws IOException {
         try (Stream<String> stream = Files.lines(Paths.get(path))) {
             stream.forEach(word -> {
                 allWords.add(word);
                 trie.insert(word);
             });
         } catch (Exception e) {
-            System.out.println("Problem occurred while reading your file : " +e);
+            System.out.println("Problem occurred while reading your file : " + e);
         }
     }
 }

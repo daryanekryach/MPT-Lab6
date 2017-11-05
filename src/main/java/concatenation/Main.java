@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         TrieImplementation();
         HashSetImplementation();
-}
+    }
 
     private static void TrieImplementation() throws IOException {
         System.out.println("FINDING CONCATENATED WORDS WITH TRIE IMPLEMENTATION\n");
@@ -35,7 +35,7 @@ public class Main {
         concatenationHashSet.free();
     }
 
-    private static void getConcatenatedWordsInfo(ConcatenatedWords concatenation){
+    private static void getConcatenatedWordsInfo(ConcatenatedWords concatenation) {
         System.out.println("The first longest concatenated word is " +
                 concatenation.getFirstLongestConcatenatedWord());
         System.out.println("The second longest concatenated word is " +
