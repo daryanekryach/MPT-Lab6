@@ -7,7 +7,7 @@ public class Trie {
         root = new TrieNode();
     }
 
-    public void insert(String word) {
+    public boolean insert(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
@@ -20,6 +20,7 @@ public class Trie {
                 node = node.letters[index];
         }
         node.isEnd = true;
+        return node.isEnd;
     }
 
     public boolean isPresentInTrie(String word) {

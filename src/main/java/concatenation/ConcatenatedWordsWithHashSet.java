@@ -42,12 +42,13 @@ public class ConcatenatedWordsWithHashSet extends ConcatenatedWords {
         }
     }
 
-    public void findConcatenatedWords() {
+    public boolean findConcatenatedWords() {
         for (String word : allWords) {
             currentWord = word;
             checkForConcatenation(word);
         }
         concatenatedWords.sort(Comparator.comparing(String::length).reversed());
+        return true;
     }
 
 }
