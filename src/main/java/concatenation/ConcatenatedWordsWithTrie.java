@@ -1,4 +1,4 @@
-package wordbreak;
+package concatenation;
 
 import java.io.*;
 import java.nio.file.Files;

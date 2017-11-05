@@ -1,4 +1,4 @@
-package wordbreak;
+package concatenation;
 
 public class Trie {
     private TrieNode root;
