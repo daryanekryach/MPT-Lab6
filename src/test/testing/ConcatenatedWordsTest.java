@@ -30,10 +30,6 @@ public class ConcatenatedWordsTest {
         assertNull(concatenationTrie.concatenatedWords);
     }
 
-//    @Test
-//    public void checkForConcatenationTrieTest() {
-//
-//    }
 
     @Test
     public void getFirstLongestConcatenatedWordTest() {

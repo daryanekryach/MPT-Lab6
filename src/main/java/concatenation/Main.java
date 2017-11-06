@@ -9,7 +9,7 @@ public class Main {
         hashSetImplementation();
     }
 
-    private static void trieImplementation() throws IOException {
+    public static boolean trieImplementation() throws IOException {
         System.out.println("FINDING CONCATENATED WORDS WITH TRIE IMPLEMENTATION\n");
 
         ConcatenatedWordsWithTrie concatenationTrie = new ConcatenatedWordsWithTrie();
@@ -20,9 +20,10 @@ public class Main {
         Metrics.getAllMetrics();
         getConcatenatedWordsInfo(concatenationTrie);
         concatenationTrie.free();
+        return true;
     }
 
-    private static void hashSetImplementation() throws IOException {
+    public static boolean hashSetImplementation() throws IOException {
         System.out.println("\nFINDING CONCATENATED WORDS WITH HASHSET IMPLEMENTATION\n");
 
         ConcatenatedWordsWithHashSet concatenationHashSet = new ConcatenatedWordsWithHashSet();
@@ -33,6 +34,7 @@ public class Main {
         Metrics.getAllMetrics();
         getConcatenatedWordsInfo(concatenationHashSet);
         concatenationHashSet.free();
+        return true;
     }
 
     private static void getConcatenatedWordsInfo(ConcatenatedWords concatenation) {

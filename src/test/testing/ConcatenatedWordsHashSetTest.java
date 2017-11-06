@@ -28,8 +28,4 @@ public class ConcatenatedWordsHashSetTest {
         assertNull(concatenationHashSet.concatenatedWords);
     }
 
-//    @Test
-//    public void checkForConcatenationHashSetTest() {
-//
-//    }
 }
