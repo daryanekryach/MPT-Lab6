@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 import concatenation.*;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 public class MainTest {
 

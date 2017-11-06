@@ -1,5 +1,8 @@
 package concatenation;
 
+/**
+ * Class that implements Trie data structure.
+ */
 public class Trie {
     private TrieNode root;
 
@@ -7,6 +10,11 @@ public class Trie {
         root = new TrieNode();
     }
 
+    /**
+     * Method that inserts word into trie.
+     * @param word - original words.
+     * @return
+     */
     public boolean insert(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
@@ -23,6 +31,11 @@ public class Trie {
         return node.isEnd;
     }
 
+    /**
+     * Method that checks if the word is present in the Trie
+     * @param word - word to look for in trie.
+     * @return
+     */
     public boolean isPresentInTrie(String word) {
         TrieNode node = searchNode(word);
         if (node == null) {
@@ -34,6 +47,11 @@ public class Trie {
         return false;
     }
 
+    /**
+     * Mwthod that performes searching for the node, that contains word.
+     * @param word - word to search.
+     * @return
+     */
     private TrieNode searchNode(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
